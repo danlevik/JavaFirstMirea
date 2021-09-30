@@ -1,6 +1,6 @@
 package ru.mirea.task5;
 
-public abstract class Furniture {
+public abstract class Furniture implements ru.mirea.task6.ex2.Priceable{
     protected String material;
     protected int price;
 
