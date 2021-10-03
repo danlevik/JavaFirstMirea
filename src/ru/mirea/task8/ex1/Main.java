@@ -14,7 +14,7 @@ public class Main extends JFrame{
     Random random = new Random();
 
     public Main(){
-        setSize(400, 400);
+        setSize(WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
