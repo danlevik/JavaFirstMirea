@@ -23,6 +23,6 @@ public class TestFurniture {
 
         System.out.println("Проверка интерфейса Priceable для работы №6");
         System.out.println(shop1.chair_arr.get(1).getPrice());
-        shop1.table_arr.get(0).getPrice();
+        System.out.println(shop1.table_arr.get(0).getPrice());
     }
 }
