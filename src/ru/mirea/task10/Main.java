@@ -1,5 +1,7 @@
 package ru.mirea.task10;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -9,7 +11,8 @@ public class Main {
         ex14(248505);
         System.out.println();
         ex15(887499);
-
+        System.out.println();
+        System.out.println(ex16()[1]);
         System.out.println(ex17());
     }
 
@@ -46,21 +49,29 @@ public class Main {
         }
     }
 
-    public static int ex16(){
+    public static int[] ex16(){
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int count = 0;
 
-        if (a == 0)
-            return a;
+        if (a == 0) {
+            int[] arr = {0, 0};
+            return arr;
+        }
 
-        int b = ex16();
-        if (a > b)
-            return 0;
-        else if (a == b)
-            return count + 1;
-        else
-            return 0;
+        int[] b = ex16();
+        if (a > b[0]){
+            int[] arr = {a, 1};
+            return arr;
+        }
+        else if (a == b[0]){
+            int[] arr = {a, b[1] + 1};
+            return arr;
+        }
+        else{
+            int[] arr = {b[0], b[1]};
+            return arr;
+        }
     }
 
     public static int ex17(){
