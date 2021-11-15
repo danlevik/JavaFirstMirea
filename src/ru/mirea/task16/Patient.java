@@ -1,5 +1,11 @@
 package ru.mirea.task16;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Scanner;
+
 public class Patient extends Person{
     MedicalCard MedicalCard;
 
@@ -12,7 +18,17 @@ public class Patient extends Person{
         return MedicalCard;
     }
 
-    public void makeAppointment(){
-        return;
+    public void makeAppointment(Doctor doctor, String strDate){
+        Scanner sc = new Scanner(System.in);
+
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-mm-yyyy", Locale.ENGLISH);
+
+        try {
+            Date date = formatter.parse(strDate);
+            doctor.addAppointment(date, this);
+        }
+        catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 }

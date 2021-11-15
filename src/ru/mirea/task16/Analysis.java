@@ -1,23 +1,24 @@
 package ru.mirea.task16;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class Analysis {
-    Calendar date;
+    Date date;
     String analysisType;
     String results;
 
-    public Analysis(Calendar date, String analysisType, String results) {
+    public Analysis(Date date, String analysisType, String results) {
         this.date = date;
         this.analysisType = analysisType;
         this.results = results;
     }
 
-    public Calendar getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(Calendar date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
