@@ -13,14 +13,15 @@ public class Main {
 
         System.out.println("Врачи:");
         for (Doctor doctor : doctors) {
-            System.out.println(doctor.name);
+            System.out.println("Доктор " + doctor.name + " cпециальности " + doctor.speciality);
+            System.out.println("И его уважаемые пациенты: ");
             for (Appointment appointment : doctor.appointments){
-                System.out.println("  " + appointment.getDate());
-                System.out.println("  " + appointment.getPatient().name);
+                System.out.println("  Дата записи: " + appointment.getDate());
+                System.out.println("  Имя пациента: " + appointment.getPatient().name);
             }
         }
 
-        System.out.println("Пациенты:");
+        System.out.println("\nВсе пациенты:");
         for (Patient patient : patients) {
             System.out.println(patient.name);
         }
@@ -56,8 +57,33 @@ public class Main {
                         String phoneNum = "88005553535";
                         String email = "doctormail@mail.ru";
 
-                        System.out.print("Введите специальность врача: ");
-                        String speciality = sc.next();
+                        System.out.println("Введите номер специальности врача из вариантов: ");
+                        System.out.println("1 - Терапевт\n2 - Дерматолог\n3 - Педиатр\n" +
+                                "4 - Уролог\n5 - Хирург\n6 - Психиатр");
+                        int speciality_num = sc.nextInt();
+                        Speciality speciality;
+                        switch (speciality_num){
+                            case 2:
+                                speciality = Speciality.valueOf("DERMATOLOGY");
+                                break;
+                            case 3:
+                                speciality = Speciality.valueOf("PEDIATRICS");
+                                break;
+                            case 4:
+                                speciality = Speciality.valueOf("UROLOGY");
+                                break;
+                            case 5:
+                                speciality = Speciality.valueOf("SURGERY");
+                                break;
+                            case 6:
+                                speciality = Speciality.valueOf("PSYCHIATRY");
+                                break;
+
+                            default:
+                                speciality = Speciality.valueOf("THERAPY");
+                                break;
+                        }
+
                         System.out.print("Введите зарплату: ");
                         int salary = sc.nextInt();
 

@@ -5,14 +5,35 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.ScheduledExecutorService;
 
+enum Speciality {
+    THERAPY{
+        public String getName() {return "Терапевт";}
+    },
+    DERMATOLOGY {
+        public String getName() {return "Дерматолог";}
+    },
+    PEDIATRICS{
+        public String getName() {return "Педиатр";}
+    },
+    UROLOGY{
+        public String getName() {return "Уролог";}
+    },
+    SURGERY{
+        public String getName() {return "Хирург";}
+    },
+    PSYCHIATRY{
+        public String getName() {return "Психиатр";}
+    }
+}
+
 public class Doctor extends Person{
-    String speciality;
+    Speciality speciality;
     int salary;
     ArrayList<Appointment> appointments;
     ArrayList<Calendar> schedule;
     ArrayList<Patient> patients;
 
-    public Doctor(String name, String phoneNum, String email, String speciality, int salary) {
+    public Doctor(String name, String phoneNum, String email, Speciality speciality, int salary) {
         super(name, phoneNum, email);
         this.appointments = new ArrayList<Appointment>();
         this.schedule = new ArrayList<Calendar>();
@@ -22,7 +43,7 @@ public class Doctor extends Person{
         this.salary = salary;
     }
 
-    public String getSpeciality() {
+    public Speciality getSpeciality() {
         return speciality;
     }
 
