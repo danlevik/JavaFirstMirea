@@ -3,6 +3,7 @@ package ru.mirea.task16;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.concurrent.ScheduledExecutorService;
 
 public class Doctor extends Person{
     String speciality;
@@ -11,9 +12,12 @@ public class Doctor extends Person{
     ArrayList<Calendar> schedule;
     ArrayList<Patient> patients;
 
-    public Doctor(String name, String phoneNum, String email, String speciality, int salary, ArrayList<Calendar> schedule, ArrayList<Patient> patients) {
+    public Doctor(String name, String phoneNum, String email, String speciality, int salary) {
         super(name, phoneNum, email);
         this.appointments = new ArrayList<Appointment>();
+        this.schedule = new ArrayList<Calendar>();
+        this.patients = new ArrayList<Patient>();
+
         this.speciality = speciality;
         this.salary = salary;
     }

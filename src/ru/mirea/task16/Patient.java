@@ -21,7 +21,7 @@ public class Patient extends Person{
     public void makeAppointment(Doctor doctor, String strDate){
         Scanner sc = new Scanner(System.in);
 
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-mm-yyyy", Locale.ENGLISH);
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
 
         try {
             Date date = formatter.parse(strDate);
