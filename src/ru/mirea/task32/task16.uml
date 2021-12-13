@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>ru.mirea.task16</OriginalElement>
+  <nodes>
+    <node x="0.0" y="359.0">ru.mirea.task16.Speciality</node>
+    <node x="492.9001636661212" y="293.46153846153845">ru.mirea.task16.Prescription</node>
+    <node x="-160.36006546644853" y="149.42062193126026">ru.mirea.task16.Appointment</node>
+    <node x="204.25" y="0.0">ru.mirea.task16.Person</node>
+    <node x="495.0245499181668" y="417.7790507364975">ru.mirea.task16.Note</node>
+    <node x="218.23895253682485" y="359.0">ru.mirea.task16.MedicalCard</node>
+    <node x="279.0" y="192.5">ru.mirea.task16.Patient</node>
+    <node x="568.7086743044189" y="169.56955810147304">ru.mirea.task16.Analysis</node>
+    <node x="0.0" y="148.0">ru.mirea.task16.Doctor</node>
+    <node x="373.0" y="18.97054009819965">ru.mirea.task16.Main</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ru.mirea.task16.Patient" target="ru.mirea.task16.Person">
+      <point x="0.0" y="-38.5" />
+      <point x="407.0" y="123.0" />
+      <point x="300.25" y="123.0" />
+      <point x="32.0" y="49.0" />
+    </edge>
+    <edge source="ru.mirea.task16.Doctor" target="ru.mirea.task16.Person">
+      <point x="0.0" y="-83.0" />
+      <point x="129.5" y="123.0" />
+      <point x="236.25" y="123.0" />
+      <point x="-32.0" y="49.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="283.0" y="284.0" />
+  <SelectedNodes>
+    <node>ru.mirea.task16.Speciality</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
